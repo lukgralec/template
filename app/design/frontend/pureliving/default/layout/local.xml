@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    <default>
+         <!--NAVCONTAINER-->
+        <reference name="root">
+            <block type="core/text_list" name="navcontainer" as="navcontainer" translate="label">
+                <label>New Reference</label>
+            </block>
+        </reference>
+        <reference name="navcontainer">
+            <block type="core/template" name="navcontainerblock" template="page/navcontainer.phtml" />
+        </reference>
+              <!--BANER-->
+        <reference name="root">
+            <block type="core/text_list" name="baner" as="baner" translate="label">
+                <label>New Reference</label>
+            </block>
+        </reference>
+        <reference name="baner">
+            <block type="core/template" name="banerblock" template="page/baner.phtml" />
+        </reference>
+        <!--NEWSLETTER-->
+        <reference name="root">
+            <block type="core/text_list" name="newsletter" as="newsletter" translate="label">
+                <label>New Reference</label>
+            </block>
+        </reference>
+        <reference name="newsletter">
+            <block type="core/template" name="newsletterblock" template="page/newsletter.phtml" />
+        </reference>
+        <!--BUTTOMLINKS-->
+        <reference name="root">
+            <block type="core/text_list" name="bottomlinks" as="bottomlinks" translate="label">
+                <label>New Reference</label>
+            </block>
+        </reference>
+        <reference name="bottomlinks">
+            <block type="core/template" name="bottomlinksblock" template="page/bottomlinks.phtml" />
+        </reference>
+        <!--FOOTER-->
+        <reference name="footer">
+            <block type="core/template" name="polcode_pureliving_footer" template="footer.phtml"/>
+        </reference>
+    </default>
+</layout>

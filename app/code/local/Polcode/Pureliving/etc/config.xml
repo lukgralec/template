@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Polcode_Pureliving>
+            <version>0.1.0</version>
+        </Polcode_Pureliving>
+    </modules>
+    
+    <global>
+        <blocks>
+            <polcode_pureliving>
+                <class>Polcode_Pureliving_Block</class>
+            </polcode_pureliving>
+        </blocks>
+    </global>
+    
+    
+    <!-- we are making changes to the frontend -->
+    <frontend>
+        <!-- we are making changes to the layout -->
+        <layout>
+            <!-- we are adding a new update file -->
+            <updates>
+                <!-- 
+                    this child node name must be
+                    unique throughout Magento
+                -->
+                <polcode_pureliving module="Polcode_Pureliving">
+                    <!-- the name of the layout file we are adding -->
+                    <file>local.xml</file>
+                </polcode_pureliving>
+            </updates>
+        </layout>
+    </frontend>
+</config>    
