@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
     <default>
-         <!--NAVCONTAINER-->
+        <!--JS-->
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>js/mscarousel.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>js/nivo-slider.css</name>
+            </action>
+            
+            
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>js/ddd.js</name>
+            </action>
+            
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery-1.2.1.pack.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery-1.6.1.min.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.msCarousel-min</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.msCarousel</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.nivo.slider</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/jquery.nivo.slider.pack</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/custom-script.js</name>
+            </action>     
+        </reference>
+        <!--NAVCONTAINER-->
         <reference name="root">
             <block type="core/text_list" name="navcontainer" as="navcontainer" translate="label">
                 <label>New Reference</label>
@@ -10,7 +56,7 @@
         <reference name="navcontainer">
             <block type="core/template" name="navcontainerblock" template="page/navcontainer.phtml" />
         </reference>
-              <!--BANER-->
+        <!--BANER-->
         <reference name="root">
             <block type="core/text_list" name="baner" as="baner" translate="label">
                 <label>New Reference</label>
@@ -18,6 +64,15 @@
         </reference>
         <reference name="baner">
             <block type="core/template" name="banerblock" template="page/baner.phtml" />
+        </reference>
+        <!--BestSellers-->
+        <reference name="root">
+            <block type="core/text_list" name="bestsellers" as="bestsellers" translate="label">
+                <label>New Reference</label>
+            </block>
+        </reference>
+        <reference name="bestsellers">
+            <block type="core/template" name="bestsellersblock" template="page/bestsellers.phtml" />
         </reference>
         <!--NEWSLETTER-->
         <reference name="root">
