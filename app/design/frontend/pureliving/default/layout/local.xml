@@ -3,49 +3,50 @@
     <default>
         <!--JS-->
         <reference name="head">
+            <block type="core/text" name="jquery">
+                <action method="setText">
+                    <text><![CDATA[<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>]]></text>
+                </action>
+            </block>
+            
+            <block type="core/text" name="your.block.name">
+                <action method="setText">
+                    <text><![CDATA[<script type="text/javascript"> $.noConflict();</script>]]></text>
+                </action>
+            </block>
+            
+            <block type="core/text" name="your.block.name">
+                <action method="setText">
+                    <text><![CDATA[<script type="text/javascript"> (window).load(function() {
+    $('#slider').nivoSlider();
+});</script>]]></text>
+                </action>
+            </block>
+            
             <action method="addItem">
-                <type>skin_css</type>
-                <name>js/mscarousel.css</name>
+                <type>external_js</type>
+                <name>http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js</name>
+                <params/>
             </action>
+            
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>js/echo.js</name>
+            </action>
+            
+           
             <action method="addItem">
                 <type>skin_css</type>
                 <name>js/nivo-slider.css</name>
             </action>
-            
-            
-            <action method="addItem">
-                <type>skin_css</type>
-                <name>js/ddd.js</name>
-            </action>
-            
             <action method="addItem">
                 <type>skin_js</type>
-                <name>js/jquery-1.2.1.pack.js</name>
+                <name>js/jquery.nivo.slider.js</name>
             </action>
             <action method="addItem">
                 <type>skin_js</type>
-                <name>js/jquery-1.6.1.min.js</name>
+                <name>js/jquery.nivo.slider.pack.js</name>
             </action>
-            <action method="addItem">
-                <type>skin_js</type>
-                <name>js/jquery.msCarousel-min</name>
-            </action>
-            <action method="addItem">
-                <type>skin_js</type>
-                <name>js/jquery.msCarousel</name>
-            </action>
-            <action method="addItem">
-                <type>skin_js</type>
-                <name>js/jquery.nivo.slider</name>
-            </action>
-            <action method="addItem">
-                <type>skin_js</type>
-                <name>js/jquery.nivo.slider.pack</name>
-            </action>
-            <action method="addItem">
-                <type>skin_js</type>
-                <name>js/custom-script.js</name>
-            </action>     
         </reference>
         <!--NAVCONTAINER-->
         <reference name="root">
@@ -97,4 +98,9 @@
             <block type="core/template" name="polcode_pureliving_footer" template="footer.phtml"/>
         </reference>
     </default>
+    <catalog_category_view>
+        
+    </catalog_category_view>
+    
+    
 </layout>
