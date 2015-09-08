@@ -3,12 +3,19 @@
 
 
 <div id="footer">
-    <?php
+    <!--    <?php
 //    $blocks = Mage::app()->getLayout()->getAllBlocks();
 //    var_dump($blocks);
     ?>
-    <p>Copyright 2011 Pure Living Collection. All Rights Reserved. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis felis lorem. Sed pellentesque dapibus consequat.</p>
-    <p>Curabitur nisi nisi, aliquam eu vehicula porttitor, vulputate ut tellus. Nulla massa quam, lacinia a adipiscing ac, fermentum volutpat velit. Nulla ac tortor eget justo accumsan facilisis. In hac habitasse platea dictumst. Nulla vehicula tortor vel nisi convallis a blandit turpis bibendum. Sed id diam no tasse platea dictumst. Nutasse platea dictumst. Nulla lla n.</p>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis felis lorem. Sed pellentesque dapibus consequat.</p>
+        <p>Copyright 2011 Pure Living Collection. All Rights Reserved. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis felis lorem. Sed pellentesque dapibus consequat.</p>
+        <p>Curabitur nisi nisi, aliquam eu vehicula porttitor, vulputate ut tellus. Nulla massa quam, lacinia a adipiscing ac, fermentum volutpat velit. Nulla ac tortor eget justo accumsan facilisis. In hac habitasse platea dictumst. Nulla vehicula tortor vel nisi convallis a blandit turpis bibendum. Sed id diam no tasse platea dictumst. Nutasse platea dictumst. Nulla lla n.</p>
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum facilisis felis lorem. Sed pellentesque dapibus consequat.</p>-->
+
+    <div id="footer-block-contactus" class="links-block clearfix">
+        <div class="block-title"><?php echo $this->__($this->getTitle()) ?></div>
+        <p><?php echo $this->__("Email:") ?> <a href="mailto:<?php echo Mage::getStoreConfig('trans_email/ident_general/email'); ?>"><?php echo Mage::getStoreConfig('trans_email/ident_general/email'); ?></a></p>
+        <p><?php echo $this->__("Tel:") ?> <?php echo Mage::getStoreConfig('general/store_information/phone'); ?></p>
+        <p><?php echo Mage::getStoreConfig('general/store_information/hours'); ?></p>
+    </div>
 
 </div>

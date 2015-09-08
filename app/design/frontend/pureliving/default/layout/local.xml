@@ -3,7 +3,7 @@
     <default>
         <!--JS-->
         <reference name="head">
-            <block type="core/text" name="jquery">
+<!--            <block type="core/text" name="jquery">
                 <action method="setText">
                     <text><![CDATA[<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>]]></text>
                 </action>
@@ -18,35 +18,101 @@
             <block type="core/text" name="your.block.name">
                 <action method="setText">
                     <text><![CDATA[<script type="text/javascript"> (window).load(function() {
-    $('#slider').nivoSlider();
+             $('#slider').nivoSlider();
 });</script>]]></text>
                 </action>
             </block>
             
-            <action method="addItem">
+            <action method="addJs">
                 <type>external_js</type>
                 <name>http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js</name>
                 <params/>
             </action>
             
-            <action method="addItem">
+            <action method="addJs">
                 <type>skin_js</type>
                 <name>js/echo.js</name>
             </action>
             
+            -->
+            <!--
+            </block>
+            <action method="addJs">
+                <type>external_js</type>
+                <name>//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js</name>
+                <params/>
+            </action>
+            <action method="addCss">
+                <type>external_css</type>
+                <name>//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css</name>
+                <params/>
+            </action>-->
+            <!--            <block type="core/text" name="jquery">
+                <action method="setText">
+                    <text><![CDATA[<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>]]></text>
+                </action>
+            </block>-->
+            <action method="addJs">
+                <name>jquery/jquery-1.6.1.min.js</name>
+            </action>
+            
+            <action method="addCss">
+                <!--<type>skin_css</type>-->
+                <name>css/slider.css</name>
+            </action>
+                
+            <action method="addCss">
+                <!--<type>skin_css</type>-->
+                <name>css/mscarousel.css</name>
+            </action>
            
-            <action method="addItem">
+            <action method="addCss">
+                <!--<type>skin_css</type>-->
+                <name>css/mscarousel.css</name>
+            </action>
+           
+            <action method="addJs">
+                <!--<type>skin_js</type>-->
+                <name>js/slider1.js</name>
+            </action>
+
+            
+            <action method="addJs">
+                <name>js/jquery.msCarousel-min.js</name>
+            </action>
+            <action method="addJs">
+                <name>js/jquery.msCarousel.js</name>
+            </action>
+
+            
+
+            <action method="addJs">
+                <name>js/caruselcall.js</name>
+            </action>
+            
+       
+       
+           
+           
+           
+        
+           
+           
+           
+            <!--           
+            <action method="addCss">
                 <type>skin_css</type>
                 <name>js/nivo-slider.css</name>
             </action>
-            <action method="addItem">
+            <action method="addJs">
                 <type>skin_js</type>
                 <name>js/jquery.nivo.slider.js</name>
             </action>
-            <action method="addItem">
+            <action method="addJs">
                 <type>skin_js</type>
                 <name>js/jquery.nivo.slider.pack.js</name>
-            </action>
+            </action>-->
+            
         </reference>
         <!--NAVCONTAINER-->
         <reference name="root">
@@ -57,24 +123,7 @@
         <reference name="navcontainer">
             <block type="core/template" name="navcontainerblock" template="page/navcontainer.phtml" />
         </reference>
-        <!--BANER-->
-        <reference name="root">
-            <block type="core/text_list" name="baner" as="baner" translate="label">
-                <label>New Reference</label>
-            </block>
-        </reference>
-        <reference name="baner">
-            <block type="core/template" name="banerblock" template="page/baner.phtml" />
-        </reference>
-        <!--BestSellers-->
-        <reference name="root">
-            <block type="core/text_list" name="bestsellers" as="bestsellers" translate="label">
-                <label>New Reference</label>
-            </block>
-        </reference>
-        <reference name="bestsellers">
-            <block type="core/template" name="bestsellersblock" template="page/bestsellers.phtml" />
-        </reference>
+       
         <!--NEWSLETTER-->
         <reference name="root">
             <block type="core/text_list" name="newsletter" as="newsletter" translate="label">
@@ -102,5 +151,20 @@
         
     </catalog_category_view>
     
-    
+     <cms_index_index>    
+            <!--BANER-->
+            <reference name="content">
+                <block type="core/text_list" name="baner" as="baner" translate="label">
+                    <label>New Reference</label>
+                </block>
+            </reference>
+<!--            <reference name="baner">
+                <block type="core/template" name="banerblock" template="page/baner.phtml" />
+            </reference>-->
+            <!--BestSellers-->
+            <reference name="content">
+                <block type="dada/did_template" name="bestsellers" template="page/bestsellers.phtml" />
+                
+            </reference>
+        </cms_index_index>    
 </layout>
