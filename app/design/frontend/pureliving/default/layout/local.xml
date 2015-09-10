@@ -1,170 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
     <default>
-        <!--JS-->
         <reference name="head">
-<!--            <block type="core/text" name="jquery">
-                <action method="setText">
-                    <text><![CDATA[<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>]]></text>
-                </action>
-            </block>
-            
-            <block type="core/text" name="your.block.name">
-                <action method="setText">
-                    <text><![CDATA[<script type="text/javascript"> $.noConflict();</script>]]></text>
-                </action>
-            </block>
-            
-            <block type="core/text" name="your.block.name">
-                <action method="setText">
-                    <text><![CDATA[<script type="text/javascript"> (window).load(function() {
-             $('#slider').nivoSlider();
-});</script>]]></text>
-                </action>
-            </block>
-            
-            <action method="addJs">
-                <type>external_js</type>
-                <name>http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js</name>
-                <params/>
-            </action>
-            
-            <action method="addJs">
-                <type>skin_js</type>
-                <name>js/echo.js</name>
-            </action>
-            
-            -->
-            <!--
-            </block>
-            <action method="addJs">
-                <type>external_js</type>
-                <name>//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.min.js</name>
-                <params/>
-            </action>
-            <action method="addCss">
-                <type>external_css</type>
-                <name>//cdn.jsdelivr.net/jquery.slick/1.5.7/slick.css</name>
-                <params/>
-            </action>-->
-            <!--            <block type="core/text" name="jquery">
-                <action method="setText">
-                    <text><![CDATA[<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>]]></text>
-                </action>
-            </block>-->
             <action method="addJs">
                 <name>jquery/jquery-1.6.1.min.js</name>
             </action>
-            
             <action method="addCss">
-                <!--<type>skin_css</type>-->
                 <name>css/slider.css</name>
             </action>
-                
             <action method="addCss">
-                <!--<type>skin_css</type>-->
+                <name>css/cat-style.css</name>
+            </action> 
+            <action method="addCss">
+                <name>css/cat-style.css</name>
+            </action>  
+            <action method="addCss">
+                <name>css/single-style.css</name>
+            </action>
+            <action method="addCss">
                 <name>css/mscarousel.css</name>
             </action>
-           
-            <action method="addCss">
-                <!--<type>skin_css</type>-->
-                <name>css/mscarousel.css</name>
-            </action>
-           
             <action method="addJs">
-                <!--<type>skin_js</type>-->
                 <name>js/slider1.js</name>
             </action>
-
-            
             <action method="addJs">
                 <name>js/jquery.msCarousel-min.js</name>
             </action>
             <action method="addJs">
                 <name>js/jquery.msCarousel.js</name>
             </action>
-
-            
-
             <action method="addJs">
                 <name>js/caruselcall.js</name>
             </action>
-            
-       
-       
-           
-           
-           
+        </reference>
+         <reference name="header">
+            <action method="unsetChild"><name>topSearch</name></action>
+            <action method="insert">
+                <blockName>top.search</blockName>
+                <siblingName>footer_links</siblingName>
+                <after>0</after>
+                <alias>topSearch</alias>
+            </action>
+            <block type="core/template" name="checkout_link" template="checkout-link.phtml"/>
+        </reference>
         
-           
-           
-           
-            <!--           
-            <action method="addCss">
-                <type>skin_css</type>
-                <name>js/nivo-slider.css</name>
-            </action>
-            <action method="addJs">
-                <type>skin_js</type>
-                <name>js/jquery.nivo.slider.js</name>
-            </action>
-            <action method="addJs">
-                <type>skin_js</type>
-                <name>js/jquery.nivo.slider.pack.js</name>
-            </action>-->
-            
-        </reference>
-        <!--NAVCONTAINER-->
-        <reference name="root">
-            <block type="core/text_list" name="navcontainer" as="navcontainer" translate="label">
-                <label>New Reference</label>
-            </block>
-        </reference>
-        <reference name="navcontainer">
-            <block type="core/template" name="navcontainerblock" template="page/navcontainer.phtml" />
-        </reference>
-       
-        <!--NEWSLETTER-->
-        <reference name="root">
-            <block type="core/text_list" name="newsletter" as="newsletter" translate="label">
-                <label>New Reference</label>
-            </block>
-        </reference>
-        <reference name="newsletter">
-            <block type="core/template" name="newsletterblock" template="page/newsletter.phtml" />
-        </reference>
-        <!--BUTTOMLINKS-->
-        <reference name="root">
-            <block type="core/text_list" name="bottomlinks" as="bottomlinks" translate="label">
-                <label>New Reference</label>
-            </block>
-        </reference>
-        <reference name="bottomlinks">
-            <block type="core/template" name="bottomlinksblock" template="page/bottomlinks.phtml" />
-        </reference>
-        <!--FOOTER-->
+        
+        <remove name="left.newsletter" /> <!-- if you want to remove the newsletter block which is on the left side -->
         <reference name="footer">
-            <block type="core/template" name="polcode_pureliving_footer" template="footer.phtml"/>
+            <block type="newsletter/subscribe" name="newsletter" as="newsletter" template="newsletter/subscribe.phtml" before="-" />
         </reference>
     </default>
     <catalog_category_view>
         
+        
+<!--        <reference name="content">
+            
+            <block type="core/template" name="description" template="page/description.phtml" />
+        </reference>-->
+        <!--wyswietla filterby z lewej(prawej strony){{zmiena stronami lewa i prawa columne}}-->
+        <reference name="right">
+            <block type="catalog/layer_view" name="catalog.layer.filter.view" as="blabla" template="catalog/layer/view.phtml" before="-" />     
+        </reference>
+        <!--TO jest to !!! sposob na dublujace sie blocki(inaczje sie nie dało) 
+        zamieniam nazwe blocku lewego i prawego-->
+        <remove name="left" />
+        <remove name="right.poll" />
+        <remove name="cart_sidebar" />
+        <remove name="right.permanent.callout" />
+        <!--<remove name="right.reports.product.compared"/>-->
+        <reference name="right">
+            <action method="setNameInLayout">
+                <name>left</name>
+            </action>
+        </reference>
+        <reference name="root">
+            <action method="setChild">
+                <alias>left</alias>
+                <name>left</name>
+            </action>
+            <action method="unsetChild">
+                <alias>right</alias>
+            </action>
+        </reference>
     </catalog_category_view>
-    
-     <cms_index_index>    
-            <!--BANER-->
-            <reference name="content">
-                <block type="core/text_list" name="baner" as="baner" translate="label">
-                    <label>New Reference</label>
-                </block>
-            </reference>
-<!--            <reference name="baner">
-                <block type="core/template" name="banerblock" template="page/baner.phtml" />
-            </reference>-->
-            <!--BestSellers-->
-            <reference name="content">
-                <block type="dada/did_template" name="bestsellers" template="page/bestsellers.phtml" />
-                
-            </reference>
-        </cms_index_index>    
+    <catalog_product_view>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/1column.phtml</template>
+            </action>
+        </reference>
+        
+<!--        <reference name="product.info">
+        <block type="review/product_view_list" name="product.reviews" as="reviews" template="review/product/view/list.phtml" after="additional">
+            <action method="addToParentGroup"><group>detailed_info</group></action>
+            <action method="setTitle" translate="value"><value>Reviews</value></action>
+        </block>
+    </reference>-->
+    </catalog_product_view>
 </layout>
